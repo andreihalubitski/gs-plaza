@@ -6,11 +6,6 @@ var $carouselPresentationImage = $(".carousel-presentation-image");
 var $heroSliderImage = $('.carousel-hero-slider .image img');
 var navigationPosition;
 var navigationHasBackground;
-var mainNavigation = $(".main-navigation");
-var countDown = $(".count-down");
-var blockWrapper = $('.block-wrapper');
-var numbers = $(".numbers");
-var body = $("body");
 
 $(document).ready(function($) {
     "use strict";
@@ -18,7 +13,7 @@ $(document).ready(function($) {
 //  Preloading
 
     Pace.on('done', function() {
-        body.addClass("loading-done");
+        $("body").addClass("loading-done");
         setBlocksHeight();
         $.each( $(".hero-slider .animate"), function (i) {
             var $this = $(this);
@@ -28,6 +23,8 @@ $(document).ready(function($) {
         });
     });
 
+	$('[data-toggle="tooltip"]').tooltip();
+	
     $("select").selectpicker();
 
 //  Initialize functions
@@ -37,7 +34,7 @@ $(document).ready(function($) {
 
     centerSlider();
 
-    if( mainNavigation.hasClass("bg-dark") || mainNavigation.hasClass("bg-white") ){
+    if( $(".main-navigation").hasClass("bg-dark") || $(".main-navigation").hasClass("bg-white") ){
         navigationHasBackground = 1;
     }
     else {
@@ -50,19 +47,19 @@ $(document).ready(function($) {
         initializeReadMore();
     });
 
-    if( mainNavigation.length ){
+    if( $('.main-navigation').length ){
         navigationPosition = Math.round( $('.main-navigation').offset().top );
     }
 
 //  Count Down
 
-    if(countDown.length ) {
-        //var $this = countDown;
-        var day = countDown.attr("data-day");
-        var month = countDown.attr("data-month");
-        var year = countDown.attr("data-year");
+    if($(".count-down").length ) {
+        var $this = $(".count-down");
+        var day = $this.attr("data-day");
+        var month = $this.attr("data-month");
+        var year = $this.attr("data-year");
         var date = year+'/'+month+'/'+day;
-        countDown.countdown(date, function(event) {
+        $this.countdown(date, function(event) {
             $(".count-down .days").text( event.strftime('%D') );
             $(".count-down .hours").text( event.strftime('%H') );
             $(".count-down .minutes").text( event.strftime('%M') );
@@ -71,28 +68,27 @@ $(document).ready(function($) {
     }
 
 //  Animation on element appear
-
-    blockWrapper.appear();
-    blockWrapper.on('appear', function() {
+/*
+    $('.block-wrapper').appear();
+    $('.block-wrapper').on('appear', function() {
         $(this).addClass("show");
-        if( !numbers.hasClass("counting") && !numbers.hasClass("count-down") ){
+        if( !$(".numbers").hasClass("counting") && !$(".numbers").hasClass("count-down") ){
             initializeCounterUp();
-            numbers.addClass("counting");
+            $(".numbers").addClass("counting");
         }
     });
-
+*/
 //  Fit videos to container width
-    var video = $(".video");
 
-    if(video.length > 0) {
-        video.fitVids();
+    if($(".video").length > 0) {
+        $(".video").fitVids();
     }
 
 //  Navigation animation
 
     $(".navigation-button, .navigation-items a").on("click", function() {
-        if( body.hasClass("show-nav") ){
-            body.removeClass("show-nav");
+        if( $("body").hasClass("show-nav") ){
+            $("body").removeClass("show-nav");
             $.each( $(".navigation-items li"), function (i) {
                 var $this = $(this);
                 setTimeout(function(){
@@ -101,7 +97,7 @@ $(document).ready(function($) {
             });
         }
         else {
-            body.addClass("show-nav");
+            $("body").addClass("show-nav");
             $.each( $(".navigation-items li"), function (i) {
                 var $this = $(this);
                 setTimeout(function(){
@@ -111,7 +107,7 @@ $(document).ready(function($) {
         }
     });
     $(".overlay").on("click", function() {
-        body.removeClass("show-nav");
+        $("body").removeClass("show-nav");
     });
 
 //  Smooth Navigation Scrolling
@@ -128,9 +124,9 @@ $(document).ready(function($) {
     });
 
 //  Calendar
-    var inputDateRange = $(".input-daterange");
-    if( inputDateRange.length > 0 ){
-        inputDateRange.datepicker({
+
+    if( $(".input-daterange").length > 0 ){
+        $(".input-daterange").datepicker({
             todayHighlight: true
         });
     }
@@ -145,21 +141,21 @@ $(window).scroll(function () {
     var scrollAmount = $(window).scrollTop() / 4;
     scrollAmount = Math.round(scrollAmount);
 
-    if( !mainNavigation.hasClass("navigation-fix-to-top") ){
+    if( !$('.main-navigation').hasClass("navigation-fix-to-top") ){
         if ( $(window).scrollTop() >= navigationPosition ) {
-            mainNavigation.addClass('fix-to-top');
+            $('.main-navigation').addClass('fix-to-top');
         } else {
-            mainNavigation.removeClass('fix-to-top');
+            $('.main-navigation').removeClass('fix-to-top');
         }
     }
 
-    if ( $(window).scrollTop() > 0 ) {
+    if ( $(window).scrollTop() >= $(window).height() ) {
         if( !navigationHasBackground ){
-            mainNavigation.addClass('bg-dark bg-expand-left');
+            $('.main-navigation').addClass('bg-dark bg-expand-left');
         }
     } else {
         if( !navigationHasBackground ){
-            mainNavigation.removeClass('bg-dark bg-expand-left');
+            $('.main-navigation').removeClass('bg-dark bg-expand-left');
         }
     }
 
@@ -251,10 +247,7 @@ function initializeOwl(){
     });
 
     $(".carousel-hero-slider").owlCarousel({
-        items: 1,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        loop:true
+        items: 1
     });
 
     $(".carousel-testimonials").owlCarousel({
@@ -278,10 +271,10 @@ function initializeOwl(){
             }
         }
     });
-    var carouselFullwidth = $(".carousel-full-width");
 
-    if( carouselFullwidth.length ){
-        var dataItems = carouselFullwidth.attr("data-items");
+    if( $(".carousel-full-width").length ){
+        var $this = $(".carousel-full-width");
+        var dataItems = $this.attr("data-items");
         var items;
         var imgArray = [];
         if( dataItems ){
@@ -291,12 +284,13 @@ function initializeOwl(){
             items = 3;
         }
 
-        carouselFullwidth.owlCarousel({
+        $this.owlCarousel({
             margin: 0,
             items: items,
             responsive:{
                 0:{
-                    items:1
+                    items:1,
+                    nav:true
                 },
                 767:{
                     items:2
@@ -327,68 +321,59 @@ function initializeOwl(){
         responsiveBaseElement: ".block"
     });
 
-    $('.carousel-presentation-description .owl-next').on("click", function() {
+//    $(".carousel-presentation-image img:first").one("load", function() {
+//        var height = $(".carousel-presentation-description").parent().height();
+//        var padding = parseInt( $(".carousel-presentation-description").parent().css("padding-top") );
+//        var blockContentHeight = height  + ( padding * 2 ) ;
+//        //console.log( $(".carousel-presentation-description").parent().height() );
+//        //console.log( parseInt( $(".carousel-presentation-description").parent().css("padding-top") ) );
+//        //console.log( blockContentHeight );
+//
+//        //$(this).closest(".block").height( $(this).context.height );
+//    }).each(function() {
+//            if(this.complete) $(this).load();
+//        });
+
+    $('.carousel-presentation-description .owl-next').click(function() {
         $(".carousel-presentation-image").trigger('next.owl.carousel');
     });
-    $('.carousel-presentation-description .owl-prev').on("click", function() {
+    $('.carousel-presentation-description .owl-prev').click(function() {
         $(".carousel-presentation-image").trigger('prev.owl.carousel');
     });
 }
 
 function centerSlider(){
-    $('.carousel-hero-slider .image img').each(function() {
+    $(".carousel-hero-slider-wrapper").height( $(window).height() );
+    $('.carousel-hero-slider .image').css('height', '');
+    $('.carousel-hero-slider').css('height', '');
 
-        var _this = $('.carousel-hero-slider .image img');
-
-        var theImage = new Image();
-        theImage.src = $heroSliderImage.attr("src");
-        var imageWidth = theImage.width;
-        var imageHeight = theImage.height;
-
-        var ratio = imageWidth / imageHeight;
-
-        var carouselHeroSlider = $('.carousel-hero-slider');
-        $(".carousel-hero-slider-wrapper").height( $(window).height() );
-        $('.carousel-hero-slider .image').css('height', '');
-        carouselHeroSlider.css('height', '');
-
-        var viewPortWidth = $(window).width();
-        var viewPortHeight = $(window).height();
-
-        if( _this.width() > viewPortWidth && _this.height() >  viewPortHeight ){
-            _this.css("width", viewPortHeight * ratio);
-            _this.css("height", viewPortHeight );
-        }
-        else if( _this.width() < viewPortWidth && _this.height() >  viewPortHeight ){
-            _this.css("width", viewPortWidth);
-            _this.css("height", viewPortWidth / ratio );
-        }
-        else if( _this.width() > viewPortWidth && _this.height() <  viewPortHeight ){
-            _this.css("width", viewPortHeight * ratio);
-            _this.css("height", viewPortHeight );
-        }
-        else if( _this.width() < viewPortWidth && _this.height() <  viewPortHeight ){
-            _this.css("width", viewPortWidth);
-            _this.css("height", viewPortWidth / ratio );
-        }
-        else if( _this.width() < viewPortWidth && _this.height() ==  viewPortHeight ){
-            _this.css("width", viewPortWidth);
-            _this.css("height", viewPortWidth / ratio );
-        }
-
-
-    });
+    var imageWidth = $heroSliderImage.width();
+    var viewPortWidth = $(window).width();
+    if( imageWidth > viewPortWidth ){
+        var centerImage = ( imageWidth/2 ) - ( viewPortWidth/2 );
+        $('.carousel-hero-slider .image img').css('left', -centerImage);
+    }
+    else if( $('.carousel-hero-slider .image img').height() < $('.carousel-hero-slider').height() ){
+        $heroSliderImage.css('height', '100%');
+        $heroSliderImage.css('width', 'auto');
+        centerImage = ( $heroSliderImage.width()/2 ) - ( viewPortWidth/2 );
+        $heroSliderImage.css('left', -centerImage);
+    }
+    else if ( imageWidth < viewPortWidth ) {
+        $heroSliderImage.css('width', '100%');
+        $heroSliderImage.css('height', 'auto');
+    }
 }
-
 
 function initializeReadMore(){
     var collapseHeight;
     var $readMore = $(".read-more");
     if( $readMore.attr("data-collapse-height") ){
-        collapseHeight =  parseInt( $readMore.attr("data-collapse-height"), 10 );
+        collapseHeight =  parseInt( $readMore.attr("data-collapse-height") );
     }else {
         collapseHeight = 55;
     }
+    //console.log( collapseHeight );
     $readMore.readmore({
         speed: 500,
         collapsedHeight: collapseHeight,
