@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ThemeStarz">
+
+    <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/fonts/elegant-fonts.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500,400,100,300,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css">
+
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <style>
+        h1 { margin: 20px 0; }
+        pre { font-size: 12px; line-height: 1.5; }
+        pre.prettyprint { background-color: #fbfbfb; border: 1px solid #F2F2F2; padding: 30px 30px; margin: 40px 0; }
+        .label { padding: 0px 5px; font-size: 12px; cursor: pointer; }
+        .label.label-primary { background-color: #FF3530; }
+        .label.label-grey { background-color: #fff; border: 1px solid #B9B9B9; color: #444; }
+        .label .atv,.label .tag, .label .pln, .label .pun, .label .atn { color: #fff; }
+        .label.label-grey .atv { color: #000; }
+        .block-wrapper .block-content, .block-wrapper .carousel-presentation-image { -webkit-opacity: 1; opacity: 1; transform: scale(1); -webkit-transfrom: scale(1);  }
+        .container > h2 { padding: 90px 0px 30px 0; border-bottom: 2px solid #EFEFEF; font-size: 42px; }
+        .atv { color: #BF1A1A; }
+        .com { color: #AEAEAE; }
+    </style>
+
+    <title>Lander - HTML Landing Page</title>
+
+</head>
+
+<body>
+
+<div class="page-wrapper">
+<br><br><br>
+<div class="container">
+    <h1>Lander Documentation / Shortcodes</h1>
+    <p><strong>Author:</strong> ThemeStarz
+        <br>
+    <strong>Date:</strong> 24.09.2015
+        <br>
+    <strong>Version:</strong> 1.0</p>
+
+    <h2 id="universal-classes">Universal Classes</h2>
+    <p>These classes gives you ability to style some elements in some conditions without writing a CSS code. For example, if you want colored font on dark background
+        (because the font color on dark background is automatically set to white) you can use class <code>text-color-white</code>. Real example of use can be found
+        further in the documentation. Here is the list of universal classes:
+    </p>
+    <ul style="font-size: 14px; line-height: 2">
+        <li><code>center</code> use for <span class="label label-grey">Texts</span> Centers the text</li>
+        <li><code>no-margin</code> use for <span class="label label-grey">Any</span> Remove margin of element</li>
+        <li><code>no-bottom-padding</code> use for <span class="label label-grey">block</span> Removes bottom padding of the block</li>
+        <li><code>no-padding</code> use for <span class="label label-grey">block</span> Removes whole padding of the block</li>
+        <li><code>move-up</code> use for <span class="label label-grey">Any</span> Moves element 20px up</li>
+        <li><code>text-align-right</code> use for <span class="label label-grey">Texts</span> Align text to right</li>
+        <li><code>bg-expand-right</code> use for <span class="label label-grey">block</span> Expands background to the right</li>
+        <li><code>bg-expand-left</code> use for <span class="label label-grey">block</span> Expands background to the left</li>
+        <li><code>bg-expand-both</code> use for <span class="label label-grey">block</span> Expands background to the both sides</li>
+        <li><code>bg-dark</code> use for <span class="label label-grey">block</span> Sets background color to dark grey</li>
+        <li><code>bg-default</code> use for <span class="label label-grey">block</span> Sets background color to default color of scheme</li>
+        <li><code>bg-light</code> use for <span class="label label-grey">block</span> Sets background color to light grey</li>
+        <li><code>bg-white</code> use for <span class="label label-grey">block</span> Sets background color to white</li>
+        <li><code>bg-opacity-5</code> use for <span class="label label-grey">block</span> Sets background opacity to 5%</li>
+        <li><code>bg-opacity-10</code> use for <span class="label label-grey">block</span> Sets background opacity to 10%</li>
+        <li><code>bg-opacity-20</code> use for <span class="label label-grey">block</span></li>
+        <li><code>bg-opacity-30</code> use for <span class="label label-grey">block</span></li>
+        <li><code>bg-opacity-40</code> use for <span class="label label-grey">block</span></li>
+        <li><code>bg-opacity-50</code> use for <span class="label label-grey">block</span></li>
+        <li><code>bg-opacity-60</code> use for <span class="label label-grey">block</span></li>
+        <li><code>bg-opacity-70</code> use for <span class="label label-grey">block</span></li>
+        <li><code>bg-opacity-80</code> use for <span class="label label-grey">block</span></li>
+        <li><code>bg-opacity-90</code> use for <span class="label label-grey">block</span> Sets background opacity to 90%</li>
+        <li><code>half-margin</code> use for <span class="label label-grey">block</span> Cuts the margin top and bottom to half</li>
+        <li><code>va-middle</code> use for <span class="label label-grey">block</span> Vertical align element inside the block</li>
+        <li><code>text-color-white</code> use for <span class="label label-grey">Texts</span> Sets color of font to white</li>
+        <li><code>text-color-dark</code> use for <span class="label label-grey">Texts</span> Sets color of font to dark grey</li>
+        <li><code>text-color-light</code> use for <span class="label label-grey">Texts</span> Sets color of font to light grey</li>
+        <li><code>text-color-default</code> use for <span class="label label-grey">Texts</span> Sets color of font to default color</li>
+    </ul>
+    <h2>How to change the color scheme</h2>
+    <p>There are several color schemes prepared for your needs. If you want to use one from these color schemes, you need to change the name of desired CSS file in the <code>&#x3C;head&#x3E;</code> tag.
+    For example you want to change the default color (which is red) to lime green:</p>
+    Change the
+    <br>
+<pre class="prettyprint">
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;assets/css/<span class="label label-primary">style</span>.css&#x22; type=&#x22;text/css&#x22;&#x3E;
+</pre>
+    Into
+<pre class="prettyprint">
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;assets/css/<span class="label label-primary">color-lime-green</span>.css&#x22; type=&#x22;text/css&#x22;&#x3E;
+</pre>
+<p>Here is the list of predefined schemes:</p>
+    <ul>
+        <li><code>color-blue</code></li>
+        <li><code>color-cyan</code></li>
+        <li><code>color-deep-magenta</code></li>
+        <li><code>color-light-brown</code></li>
+        <li><code>color-lime-green</code></li>
+        <li><code>color-orange</code></li>
+        <li><code>color-red-medium</code></li>
+        <li><code>color-red</code></li>
+        <li><code>color-royal-blue</code></li>
+    </ul>
+</div>
+
+<div class="container" id="hero-slider"><h2>Hero Slider</h2></div>
+    <section class="hero-slider">
+        <div class="heading-wrapper">
+            <div class="inner">
+                <div class="caption position-middle">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="block va-middle">
+                                    <div class="block-content">
+                                        <nav class="main-navigation bg-dark bg-expand-left navigation-fix-to-top">
+                                            <div class="brand">
+                                                <div class="image">
+                                                    <img src="assets/img/logo-app.png" alt="">
+                                                </div>
+                                                <div class="navigation-button">
+                                                    <figure></figure>
+                                                    <figure></figure>
+                                                    <figure></figure>
+                                                </div>
+                                            </div>
+                                            <ul class="navigation-items">
+                                                <li><a href="#universal-classes">Universal Classes</a></li>
+                                                <li><a href="#hero-slider">Hero Slider</a></li>
+                                                <li><a href="#blocks">Blocks</a></li>
+                                                <li><a href="#vertical-aligned-elements">Vertical Aligned Elements</a></li>
+                                            </ul>
+                                        </nav>
+                                        <!--/ .main-navigation-->
+                                        <div class="caption-text animate from-bottom">
+                                            <div class="block-content">
+                                                <h1 class="font-color-white">Documentation and Shortcodes for Lander HTML Template</h1>
+                                                <div class="bg"></div>
+                                            </div>
+                                        </div>
+                                        <!--/ .caption-text-->
+                                        <div class="animate from-bottom">
+                                            <a href="#hero-slider" class="btn btn-light btn-default btn-xl roll">Read More</a>
+                                        </div>
+                                        <!--/ .animate-->
+                                    </div>
+                                    <!--/ .block-content-->
+                                </div>
+                                <!--/ .block-->
+                            </div>
+                            <!--/ .col-md-8-->
+                            <div class="col-md-4">
+                                <div class="block">
+                                    <div class="image animate from-bottom">
+                                        <img src="assets/img/hero-img-app-phone.png" alt="">
+                                    </div>
+                                </div>
+                                <!--/ .block-->
+                            </div>
+                            <!--/ .col-md-4-->
+                        </div>
+                        <!--/ .row-->
+                    </div>
+                    <!--/ .container-->
+                </div>
+                <!--/ .caption-->
+            </div>
+            <!--/ .inner-->
+        </div>
+        <!--/ .heading-wrapper-->
+        <div class="carousel-hero-slider-wrapper">
+            <div class="owl-carousel carousel-hero-slider">
+                <div class="image">
+                    <img src="assets/img/hero-img-app.jpg" alt="">
+                </div>
+                <div class="image">
+                    <img src="assets/img/hero-img-app.jpg" alt="">
+                </div>
+            </div>
+            <!--/ .carousel-hero-slider-->
+        </div>
+        <!--/ .carousel-hero-slider-wrapper-->
+    </section>
+    <!--/ .hero-slider-->
+
+<div class="container">
+
+<pre class="prettyprint">
+&#x3C;section class=&#x22;hero-slider <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Adds parallax effect to background image (removed in this example)">has-parallax</span>&#x22;&#x3E;
+    &#x3C;div class=&#x22;heading-wrapper&#x22;&#x3E;
+        &#x3C;div class=&#x22;inner&#x22;&#x3E;
+            &#x3C;div class=&#x22;caption <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Place content of caption on the top">position-top</span> <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Place content in the middle of slider">position-middle</span> <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Place content of caption on the bottom of the slider with a little margin">position-bottom</span>&#x22;&#x3E;
+                &#x3C;div class=&#x22;container&#x22;&#x3E;
+                    &#x3C;div class=&#x22;row&#x22;&#x3E;
+                        &#x3C;div class=&#x22;col-md-8&#x22;&#x3E;
+                            &#x3C;div class=&#x22;block <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Place the content of the block in the middle. If empty: place to top">va-middle</span>&#x22;&#x3E;
+                                &#x3C;div class=&#x22;block-content&#x22;&#x3E;
+                                    &#x3C;nav class=&#x22;main-navigation <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Place the navigation to the top. If empty: Navigation is placed above the H1">navigation-fix-to-top</span> <span class="label label-grey" data-toggle="tooltip" data-placement="top" title="Tell the script that this element has to be animated">animate</span>&#x22;&#x3E;
+                                        &#x3C;div class=&#x22;brand&#x22;&#x3E;
+                                            &#x3C;div class=&#x22;image&#x22;&#x3E;
+                                                &#x3C;img src=&#x22;assets/img/logo-app.png&#x22; alt=&#x22;&#x22;&#x3E;
+                                            &#x3C;/div&#x3E;
+                                            &#x3C;div class=&#x22;navigation-button&#x22;&#x3E;
+                                                &#x3C;figure&#x3E;&#x3C;/figure&#x3E;
+                                                &#x3C;figure&#x3E;&#x3C;/figure&#x3E;
+                                                &#x3C;figure&#x3E;&#x3C;/figure&#x3E;
+                                            &#x3C;/div&#x3E;
+                                        &#x3C;/div&#x3E;
+                                        &#x3C;ul class=&#x22;navigation-items&#x22;&#x3E;
+                                            &#x3C;li&#x3E;&#x3C;a href=&#x22;#be-smarter&#x22;&#x3E;Be Smarter with Us&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                                            &#x3C;li&#x3E;&#x3C;a href=&#x22;#features&#x22;&#x3E;Main Features&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                                            &#x3C;li&#x3E;&#x3C;a href=&#x22;#gallery&#x22;&#x3E;Gallery&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                                            &#x3C;li&#x3E;&#x3C;a href=&#x22;#download&#x22;&#x3E;Download&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                                            &#x3C;li&#x3E;&#x3C;a href=&#x22;#contact&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                                        &#x3C;/ul&#x3E;
+                                    &#x3C;/nav&#x3E;
+                                    &#x3C;!--/ .main-navigation--&#x3E;
+                                    &#x3C;div class=&#x22;caption-text <span class="label label-grey" data-toggle="tooltip" data-placement="top" title="Tell the script that this element has to be animated">animate</span> <span class="label label-grey" data-toggle="tooltip" data-placement="top" title="Element will fade in from bottom">from-bottom</span>&#x22;&#x3E;
+                                        &#x3C;div class=&#x22;block-content&#x22;&#x3E;
+                                            &#x3C;h1 class=&#x22;font-color-white&#x22;&#x3E;Beautiful way to promote your new awesome application&#x3C;/h1&#x3E;
+                                            &#x3C;div class=&#x22;bg&#x22;&#x3E;&#x3C;/div&#x3E;
+                                        &#x3C;/div&#x3E;
+                                    &#x3C;/div&#x3E;
+                                    &#x3C;!--/ .caption-text--&#x3E;
+                                    &#x3C;div class=&#x22;<span class="label label-grey" data-toggle="tooltip" data-placement="top" title="Tell the script that this element has to be animated">animate</span> <span class="label label-grey" data-toggle="tooltip" data-placement="top" title="Element will fade in from bottom">from-bottom</span>&#x22;&#x3E;
+                                        &#x3C;a href=&#x22;#&#x22; class=&#x22;btn btn-light btn-default btn-xl&#x22;&#x3E;Download App&#x3C;/a&#x3E;
+                                        &#x3C;a href=&#x22;#boxes&#x22; class=&#x22;btn btn-framed btn-light btn-default btn-xl roll&#x22;&#x3E;View More&#x3C;/a&#x3E;
+                                    &#x3C;/div&#x3E;
+                                    &#x3C;!--/ .animate--&#x3E;
+                                &#x3C;/div&#x3E;
+                                &#x3C;!--/ .block-content--&#x3E;
+                            &#x3C;/div&#x3E;
+                            &#x3C;!--/ .block--&#x3E;
+                        &#x3C;/div&#x3E;
+                        &#x3C;!--/ .col-md-8--&#x3E;
+                        &#x3C;div class=&#x22;col-md-4&#x22;&#x3E;
+                            &#x3C;div class=&#x22;block&#x22;&#x3E;
+                                &#x3C;div class=&#x22;image <span class="label label-grey" data-toggle="tooltip" data-placement="top" title="Tell the script that this element has to be animated">animate</span> <span class="label label-grey" data-toggle="tooltip" data-placement="top" title="Element will fade in from bottom">from-bottom</span>&#x22;&#x3E;
+                                    &#x3C;img src=&#x22;assets/img/hero-img-app-phone.png&#x22; alt=&#x22;&#x22;&#x3E;
+                                &#x3C;/div&#x3E;
+                            &#x3C;/div&#x3E;
+                            &#x3C;!--/ .block--&#x3E;
+                        &#x3C;/div&#x3E;
+                        &#x3C;!--/ .col-md-4--&#x3E;
+                    &#x3C;/div&#x3E;
+                    &#x3C;!--/ .row--&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;!--/ .container--&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;!--/ .heading--&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--/ .inner--&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--/ .heading-wrapper--&#x3E;
+    &#x3C;div class=&#x22;carousel-hero-slider-wrapper&#x22;&#x3E;
+        &#x3C;div class=&#x22;owl-carousel carousel-hero-slider&#x22;&#x3E;
+            &#x3C;div class=&#x22;image&#x22;&#x3E;
+                &#x3C;img src=&#x22;assets/img/hero-img-app.jpg&#x22; alt=&#x22;&#x22;&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;image&#x22;&#x3E;
+                &#x3C;img src=&#x22;assets/img/hero-img-app.jpg&#x22; alt=&#x22;&#x22;&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--/ .carousel-hero-slider--&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--/ .carousel-hero-slider-wrapper--&#x3E;
+&#x3C;/section&#x3E;
+&#x3C;!--/ .hero-slider--&#x3E;
+</pre>
+
+</div>
+
+
+<div class="container" id="blocks"><h2>Default Block</h2></div>
+<section class="block-wrapper">
+    <div class="block">
+        <div class="block-content">
+            <h2>Heading</h2>
+            <p>Paragraph in default block.</p>
+            <div class="bg"></div>
+            <!--/ .bg-->
+        </div>
+        <!--/ .block-content-->
+    </div>
+    <!--/ .block-->
+</section>
+<!--/ .block-wrapper-->
+
+<div class="container">
+<pre class="prettyprint">
+&#x3C;section class=&#x22;block-wrapper&#x22;&#x3E;
+    &#x3C;div class=&#x22;block&#x22;&#x3E;
+        &#x3C;div class=&#x22;block-content&#x22;&#x3E;
+            &#x3C;h2&#x3E;Default Block without Container&#x3C;/h2&#x3E;
+            &#x3C;p&#x3E;Paragraph in default block.&#x3C;/p&#x3E;
+            &#x3C;div class=&#x22;bg&#x22;&#x3E;&#x3C;/div&#x3E;
+            &#x3C;!--/ .bg--&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--/ .block-content--&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--/ .block--&#x3E;
+&#x3C;/section&#x3E;
+&#x3C;!--/ .block-wrapper--&#x3E;
+</pre>
+</div>
+
+
+<div class="container"><h2>Default Block in Container</h2></div>
+<section class="block-wrapper">
+    <div class="container">
+        <div class="block">
+            <div class="block-content">
+                <h2>Heading</h2>
+                <p>Paragraph in default block.</p>
+                <div class="bg"></div>
+                <!--/ .bg-->
+            </div>
+            <!--/ .block-content-->
+        </div>
+        <!--/ .block-->
+    </div>
+    <!--/ .container-->
+</section>
+<!--/ .block-wrapper-->
+
+<div class="container">
+<pre class="prettyprint">
+&#x3C;section class=&#x22;block-wrapper&#x22;&#x3E;
+    &#x3C;div class=&#x22;container&#x22;&#x3E;
+        &#x3C;div class=&#x22;block&#x22;&#x3E;
+            &#x3C;div class=&#x22;block-content&#x22;&#x3E;
+                &#x3C;h2&#x3E;Default Block in Container&#x3C;/h2&#x3E;
+                &#x3C;p&#x3E;Paragraph in default block.&#x3C;/p&#x3E;
+                &#x3C;div class=&#x22;bg&#x22;&#x3E;&#x3C;/div&#x3E;
+                &#x3C;!--/ .bg--&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;!--/ .block-content--&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--/ .block--&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--/ .container--&#x3E;
+&#x3C;/section&#x3E;
+&#x3C;!--/ .block-wrapper--&#x3E;
+</pre>
+</div>
+
+
+
+<div class="container"><h2>A Block With Default Background Color</h2></div>
+<section class="block-wrapper">
+    <div class="container">
+        <div class="block bg-default">
+            <div class="block-content">
+                <h2>Heading</h2>
+                <p>Paragraph in block</p>
+                <div class="bg"></div>
+                <!--/ .bg-->
+            </div>
+            <!--/ .block-content-->
+        </div>
+        <!--/ .block-->
+    </div>
+    <!--/ .container-->
+</section>
+<!--/ .block-wrapper-->
+
+<div class="container">
+<br>
+<p>If the background is set to <code>bg-default</code> or <code>bg-dark</code>, font color will be automatically set to white.</p>
+<pre class="prettyprint">
+&#x3C;section class=&#x22;block-wrapper&#x22;&#x3E;
+    &#x3C;div class=&#x22;container&#x22;&#x3E;
+        &#x3C;div class=&#x22;block <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Background color will be the default color">bg-default</span> <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Background color will be the dark color">bg-dark</span> <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Background color will be the light color">bg-light</span> <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Background will be expanded to the left">bg-expand-left</span> <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Background will be expanded to the right">bg-expand-right</span> <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Background will be expanded to both sides">bg-expand-both</span> <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Sets opacity of the background to 10%. You can use 5,10,20,30,40,50,60,70,80,90">bg-opacity-10</span> &#x22;&#x3E;
+            &#x3C;div class=&#x22;block-content&#x22;&#x3E;
+                &#x3C;h2&#x3E;Default Block in Container&#x3C;/h2&#x3E;
+                &#x3C;p&#x3E;Paragraph in default block.&#x3C;/p&#x3E;
+                &#x3C;div class=&#x22;bg&#x22;&#x3E;&#x3C;/div&#x3E;
+                &#x3C;!--/ .bg--&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;!--/ .block-content--&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--/ .block--&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--/ .container--&#x3E;
+&#x3C;/section&#x3E;
+&#x3C;!--/ .block-wrapper--&#x3E;
+</pre>
+</div>
+
+
+<div class="container"><h2>A Block With Dark Background Color Expanded to Both Sides and Opacity 90%</h2></div>
+<section class="block-wrapper">
+    <div class="container">
+        <div class="block bg-dark bg-expand-both bg-opacity-90">
+            <div class="block-content">
+                <h2>Heading</h2>
+                <p>Paragraph in block</p>
+                <div class="bg"></div>
+                <!--/ .bg-->
+            </div>
+            <!--/ .block-content-->
+        </div>
+        <!--/ .block-->
+    </div>
+    <!--/ .container-->
+</section>
+<!--/ .block-wrapper-->
+
+<div class="container">
+<pre class="prettyprint">
+&#x3C;section class=&#x22;block-wrapper&#x22;&#x3E;
+    &#x3C;div class=&#x22;container&#x22;&#x3E;
+        &#x3C;div class=&#x22;block <span class="label label-grey">bg-dark</span> <span class="label label-grey">bg-expand-both</span> <span class="label label-grey">bg-opacity-90</span>&#x22;&#x3E;
+            &#x3C;div class=&#x22;block-content&#x22;&#x3E;
+                &#x3C;h2&#x3E;Default Block in Container&#x3C;/h2&#x3E;
+                &#x3C;p&#x3E;Paragraph in default block.&#x3C;/p&#x3E;
+                &#x3C;div class=&#x22;bg&#x22;&#x3E;&#x3C;/div&#x3E;
+                &#x3C;!--/ .bg--&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;!--/ .block-content--&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--/ .block--&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--/ .container--&#x3E;
+&#x3C;/section&#x3E;
+&#x3C;!--/ .block-wrapper--&#x3E;
+</pre>
+</div>
+
+
+<div class="container"><h2>A Block With Light Background Color Expanded to Left Side and with Background Image</h2></div>
+<section class="block-wrapper">
+    <div class="container">
+        <div class="block bg-light bg-expand-left">
+            <div class="block-content">
+                <h2>Heading</h2>
+                <p>Paragraph in block</p>
+                <div class="bg">
+                    <img src="assets/img/bg.png">
+                </div>
+                <!--/ .bg-->
+            </div>
+            <!--/ .block-content-->
+        </div>
+        <!--/ .block-->
+    </div>
+    <!--/ .container-->
+</section>
+<!--/ .block-wrapper-->
+
+<div class="container">
+<pre class="prettyprint">
+&#x3C;section class=&#x22;block-wrapper&#x22;&#x3E;
+    &#x3C;div class=&#x22;container&#x22;&#x3E;
+        &#x3C;div class=&#x22;block <span class="label label-grey">bg-light</span> <span class="label label-grey">bg-expand-left</span>&#x22;&#x3E;
+            &#x3C;div class=&#x22;block-content&#x22;&#x3E;
+                &#x3C;h2&#x3E;Default Block in Container&#x3C;/h2&#x3E;
+                &#x3C;p&#x3E;Paragraph in default block.&#x3C;/p&#x3E;
+                &#x3C;div class=&#x22;bg&#x22;&#x3E;
+                    <span class="label label-primary">&#x3C;img src="assets/img/bg.png"&#x3E;</span>
+                &#x3C;/div&#x3E;
+                &#x3C;!--/ .bg--&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;!--/ .block-content--&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--/ .block--&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!--/ .container--&#x3E;
+&#x3C;/section&#x3E;
+&#x3C;!--/ .block-wrapper--&#x3E;
+</pre>
+</div>
+
+
+<div class="container"><h2>Block with middle and top vertical alignment</h2></div>
+<section class="block-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-7">
+                <div class="block va-middle">
+                    <div class="block-content">
+                        <h2>This content has <code>va-middle</code> class and is aligned in the middle</h2>
+                        <p>Proin quis sem ut ipsum scelerisque dapibus a vitae enim. Integer congue, dui ornare sodales sagittis,
+                            mi magna bibendum lacus, id aliquam sem risus sit amet ipsum.
+                            Morbi suscipit efficitur viverra. Praesent sollicitudin tellus nec pharetra tristique.
+                            Proin quis sem ut ipsum scelerisque dapibus a vitae enim. Integer congue, dui ornare sodales sagittis,
+                            mi magna bibendum lacus, id aliquam sem risus sit amet ipsum.
+                            Morbi suscipit efficitur viverra. Praesent sollicitudin tellus nec pharetra tristique.
+                            Proin quis sem ut ipsum scelerisque dapibus a vitae enim. Integer congue, dui ornare sodales sagittis,
+                            mi magna bibendum lacus, id aliquam sem risus sit amet ipsum.
+                            Morbi suscipit efficitur viverra. Praesent sollicitudin tellus nec pharetra tristique.
+                        </p>
+                        <a href="#">Check out more features <i class="arrow_carrot-down_alt2"></i></a>
+                        <div class="bg"></div>
+                        <!--/ .bg-->
+                    </div>
+                    <!--/ .block-content-->
+                </div>
+                <!--/ .block-->
+            </div>
+            <!--/ .col-md-7 col-sm-7-->
+            <div class="col-md-5 col-sm-5">
+                <div class="block bg-dark bg-opacity-90 bg-expand-right va-top">
+                    <div class="block-content">
+                        <div class="owl-carousel carousel-testimonials">
+                            <blockquote>
+                                <i class="icon_quotations quote-icon"></i>
+                                <p>This content has <code>va-top</code> class and is aligned to top</p>
+                                <footer>John Doe</footer>
+                            </blockquote>
+                            <blockquote>
+                                <i class="icon_quotations quote-icon"></i>
+                                <p>Nullam pretium nisi eu turpis feugiat sollicitudin. Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                                <footer>John Doe</footer>
+                            </blockquote>
+                        </div>
+                        <div class="bg"></div>
+                        <!--/ .bg-->
+                    </div>
+                    <!--/ .block-content-->
+                </div>
+                <!--/ .block-->
+            </div>
+            <!--/ .col-md-5 col-sm-5-->
+        </div>
+    </div>
+    <!--/ .container-->
+</section>
+<!--/ .block-wrapper-->
+
+<div class="container">
+<pre class="prettyprint">
+&#x3C;section class=&#x22;block-wrapper&#x22;&#x3E;
+&#x3C;div class=&#x22;container&#x22;&#x3E;
+    &#x3C;div class=&#x22;row&#x22;&#x3E;
+        &#x3C;div class=&#x22;col-md-7 col-sm-7&#x22;&#x3E;
+            &#x3C;div class=&#x22;block <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Align the content of block to the middle">va-middle</span>&#x22;&#x3E;
+                &#x3C;div class=&#x22;block-content&#x22;&#x3E;
+                    &#x3C;h2&#x3E;This content has &#x3C;code&#x3E;va-middle&#x3C;/code&#x3E; class and is aligned in the middle&#x3C;/h2&#x3E;
+                    &#x3C;p&#x3E;Proin quis sem ut ipsum scelerisque dapibus a vitae enim. Integer congue, dui ornare sodales sagittis,
+                        mi magna bibendum lacus, id aliquam sem risus sit amet ipsum.
+                        Morbi suscipit efficitur viverra. Praesent sollicitudin tellus nec pharetra tristique.
+                        Proin quis sem ut ipsum scelerisque dapibus a vitae enim. Integer congue, dui ornare sodales sagittis,
+                        mi magna bibendum lacus, id aliquam sem risus sit amet ipsum.
+                        Morbi suscipit efficitur viverra. Praesent sollicitudin tellus nec pharetra tristique.
+                        Proin quis sem ut ipsum scelerisque dapibus a vitae enim. Integer congue, dui ornare sodales sagittis,
+                        mi magna bibendum lacus, id aliquam sem risus sit amet ipsum.
+                        Morbi suscipit efficitur viverra. Praesent sollicitudin tellus nec pharetra tristique.
+                    &#x3C;/p&#x3E;
+                    &#x3C;a href=&#x22;#&#x22;&#x3E;Check out more features &#x3C;i class=&#x22;arrow_carrot-down_alt2&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+                    &#x3C;div class=&#x22;bg&#x22;&#x3E;&#x3C;/div&#x3E;
+                    &#x3C;!--/ .bg--&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;!--/ .block-content--&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;!--/ .block--&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--/ .col-md-7 col-sm-7--&#x3E;
+        &#x3C;div class=&#x22;col-md-5 col-sm-5&#x22;&#x3E;
+            &#x3C;div class=&#x22;block bg-dark bg-opacity-90 bg-expand-right <span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Align the content of block to the top">va-top</span>&#x22;&#x3E;
+                &#x3C;div class=&#x22;block-content&#x22;&#x3E;
+                    &#x3C;div class=&#x22;owl-carousel carousel-testimonials&#x22;&#x3E;
+                        &#x3C;blockquote&#x3E;
+                            &#x3C;i class=&#x22;icon_quotations quote-icon&#x22;&#x3E;&#x3C;/i&#x3E;
+                            &#x3C;p&#x3E;This content has &#x3C;code&#x3E;va-top&#x3C;/code&#x3E; class and is aligned to top&#x3C;/p&#x3E;
+                            &#x3C;footer&#x3E;John Doe&#x3C;/footer&#x3E;
+                        &#x3C;/blockquote&#x3E;
+                        &#x3C;blockquote&#x3E;
+                            &#x3C;i class=&#x22;icon_quotations quote-icon&#x22;&#x3E;&#x3C;/i&#x3E;
+                            &#x3C;p&#x3E;Nullam pretium nisi eu turpis feugiat sollicitudin. Cum sociis natoque penatibus et magnis dis parturient montes&#x3C;/p&#x3E;
+                            &#x3C;footer&#x3E;John Doe&#x3C;/footer&#x3E;
+                        &#x3C;/blockquote&#x3E;
+                    &#x3C;/div&#x3E;
+                    &#x3C;div class=&#x22;bg&#x22;&#x3E;&#x3C;/div&#x3E;
+                    &#x3C;!--/ .bg--&#x3E;
+                &#x3C;/div&#x3E;
+                &#x3C;!--/ .block-content--&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;!--/ .block--&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--/ .col-md-5 col-sm-5--&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!--/ .container--&#x3E;
+&#x3C;/section&#x3E;
+&#x3C;!--/ .block-wrapper--&#x3E;
+</pre>
+</div>
+
+
+<div class="container" id="vertical-aligned-elements"><h2>Inline Vertical Aligned Elements</h2></div>
+<section class="block-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-9">
+                <div class="block bg-dark bg-opacity-90 bg-expand-left va-middle">
+                    <div class="block-content">
+                        <div class="vertical-aligned-elements">
+                            <div class="element">
+                                <h2 class="center no-margin">Vertical aligned text</h2>
+                            </div>
+                            <div class="element">
+                                <a href="#" class="btn btn-primary btn-framed pull-right btn-rounded">Vertical aligned button</a>
+                            </div>
+                        </div>
+                        <div class="bg"></div>
+                        <!--/ .bg-->
+                    </div>
+                    <!--/ .block-content-->
+                </div>
+            </div>
+        </div>
+        <!--/ .block-->
+    </div>
+    <!--/ .container-->
+</section>
+<!--/ .block-wrapper-->
+
+<div class="container">
+<pre class="prettyprint">
+&#x3C;section class=&#x22;block-wrapper&#x22;&#x3E;
+        &#x3C;div class=&#x22;container&#x22;&#x3E;
+            &#x3C;div class=&#x22;row&#x22;&#x3E;
+                &#x3C;div class=&#x22;col-md-9 col-sm-9&#x22;&#x3E;
+                    &#x3C;div class=&#x22;block bg-dark bg-opacity-90 bg-expand-left va-middle&#x22;&#x3E;
+                        &#x3C;div class=&#x22;block-content&#x22;&#x3E;
+                            &#x3C;div class=&#x22;<span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Inside content will be vertically aligned">vertical-aligned-elements</span>&#x22;&#x3E;
+                                &#x3C;div class=&#x22;<span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Vertically aligned element">element</span>&#x22;&#x3E;
+                                    &#x3C;h2 class=&#x22;<span class="label label-grey" data-toggle="tooltip" data-placement="top" title="Align text to the middle">center</span> <span class="label label-grey" data-toggle="tooltip" data-placement="top" title="Removes top and bottom margin, so the text is nicely in the middle">no-margin</span>&#x22;&#x3E;Donec vitae accumsan enim, vestibulum consectetur mi&#x3C;/h2&#x3E;
+                                &#x3C;/div&#x3E;
+                                &#x3C;div class=&#x22;<span class="label label-primary" data-toggle="tooltip" data-placement="top" title="Vertically aligned element">element</span>&#x22;&#x3E;
+                                    &#x3C;a href=&#x22;#&#x22; class=&#x22;btn btn-primary btn-framed pull-right btn-rounded&#x22;&#x3E;Contact Agent&#x3C;/a&#x3E;
+                                &#x3C;/div&#x3E;
+                            &#x3C;/div&#x3E;
+                            &#x3C;div class=&#x22;bg&#x22;&#x3E;&#x3C;/div&#x3E;
+                            &#x3C;!--/ .bg--&#x3E;
+                        &#x3C;/div&#x3E;
+                        &#x3C;!--/ .block-content--&#x3E;
+                    &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;!--/ .block--&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;!--/ .container--&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;!--/ .block-wrapper--&#x3E;
+</pre>
+</div>
+
+</div>
+
+<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.appear.js"></script>
+<script type="text/javascript" src="assets/js/readmore.min.js"></script>
+<script type="text/javascript" src="assets/js/pace.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>
+<script type="text/javascript" src="assets/js/markerwithlabel_packed.js"></script>
+<script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
+
+<script type="text/javascript" src="assets/js/custom.js"></script>
+
+<!--[if lte IE 9]>
+<script src="assets/js/ie.js"></script>
+<![endif]-->
+
+
+</body>
