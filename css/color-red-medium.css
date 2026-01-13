@@ -144,7 +144,7 @@
 .main-navigation .navigation-items li a {
   color: black;
   padding: 10px 0;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* 2. Hero Slider */
@@ -378,21 +378,21 @@ h1 {
 
 h2 {
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 100;
   margin-bottom: 30px;
   margin-top: 0px;
 }
 
 h3 {
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 100;
   margin-bottom: 20px;
   margin-top: 10px;
 }
 
 h4 {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: lighter;
 }
 
 hr {
@@ -405,10 +405,10 @@ img {
 }
 
 p {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
   color: black;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   padding: 10px 0;
 }
@@ -661,10 +661,10 @@ strong {
   -moz-transition: all 0.6s ease-in-out;
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
-  -moz-transform: scale(0.98, 0.98);
-  -ms-transform: scale(0.98, 0.98);
-  -webkit-transform: scale(0.98, 0.98);
-  transform: scale(0.98, 0.98);
+  -moz-transform: scale(0.9, 0.9);
+  -ms-transform: scale(0.9, 0.9);
+  -webkit-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
 }
 .block-wrapper.show .block-content, .block-wrapper.show .carousel-presentation-image {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -686,10 +686,6 @@ strong {
 
 .font-color-dark {
   color: #323232;
-}
-
-.text-color-white {
-  color: #fff !important;
 }
 
 .text-color-dark {
@@ -1097,8 +1093,8 @@ strong {
   font-weight: 100;
 }
 .numbers .number aside {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
   font-size: 18px;
 }
 .numbers .separator {
@@ -1138,7 +1134,7 @@ strong {
 }
 .tab-content .tab-list section .time {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 20px;
 }
 .tab-content .tab-list section .time i {
@@ -1257,7 +1253,7 @@ strong {
 .panel-group .panel .panel-collapse > .panel-body {
   border-top-color: transparent;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   padding: 20px;
 }
 .panel-group .panel .panel-collapse > .panel-body aside {
@@ -1295,7 +1291,7 @@ strong {
   overflow: hidden;
 }
 .person h3 {
-  font-weight: 400;
+  font-weight: 300;
 }
 .person hr {
   width: 50px;
@@ -1304,7 +1300,7 @@ strong {
 .person aside {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .pills-big .nav-pills > li {
@@ -1385,7 +1381,7 @@ strong {
   color: #ea5f4d;
 }
 .presentation figure h3 {
-  font-weight: 400;
+  font-weight: 300;
 }
 .presentation .description, .presentation .image {
   display: table-cell;
@@ -1421,7 +1417,7 @@ strong {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 10px;
 }
 .price-box hr {
@@ -1518,7 +1514,7 @@ input[type="text"], input[type="email"], input[type="date"], input[type="time"],
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   outline: none !important;
   padding: 7px 9px 8px;
   width: 100%;
@@ -1617,7 +1613,7 @@ button:hover, button:active, button:focus {
 .btn.btn-large, select.btn-large {
   padding: 12px;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
 }
 .btn.btn-dark, select.btn-dark {
   background-color: black;
@@ -1672,7 +1668,7 @@ button:hover, button:active, button:focus {
 .bootstrap-select.large .btn {
   font-size: 18px;
   text-transform: none;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .dropdown-menu {
@@ -1766,25 +1762,6 @@ button:hover, button:active, button:focus {
     padding-left: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
-  }
-
-  .hero-slider .numbers .number figure {
-    font-size: 90px;
-  }
-
-  .hero-slider .numbers .number {
-    margin-bottom: 10px;
-  }
-
-  .hero-slider .numbers .number aside {
-    font-size: 16px;
-  }
-
-  .hero-slider .numbers .number .separator {
-    height: 100px;
-    width: 2px;
-    right: 0px;
-    top: 0px;
   }
 
   .numbers .number aside {
@@ -1881,25 +1858,6 @@ button:hover, button:active, button:focus {
     padding-left: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
-  }
-
-  .hero-slider .numbers .number figure {
-    font-size: 72px;
-  }
-
-  .hero-slider .numbers .number {
-    margin-bottom: 10px;
-  }
-
-  .hero-slider .numbers .number aside {
-    font-size: 16px;
-  }
-
-  .hero-slider .numbers .number .separator {
-    height: 100px;
-    width: 2px;
-    right: 0px;
-    top: 0px;
   }
 
   .input-group.large .btn {
@@ -2037,25 +1995,6 @@ button:hover, button:active, button:focus {
     padding-bottom: 50px;
   }
 
-  .hero-slider .numbers .number figure {
-    font-size: 40px;
-  }
-
-  .hero-slider .numbers .number {
-    margin-bottom: 10px;
-  }
-
-  .hero-slider .numbers .number aside {
-    font-size: 12px;
-  }
-
-  .hero-slider .numbers .number .separator {
-    height: 120px;
-    width: 2px;
-    right: 0px;
-    top: -20px;
-  }
-
   .input-group.large .btn {
     padding: 12px;
   }
@@ -2123,12 +2062,6 @@ button:hover, button:active, button:focus {
   .vertical-aligned-elements .element {
     display: block;
     margin-bottom: 20px;
-    width: 100%;
-    text-align: center;
-    white-space: inherit;
-  }
-  .vertical-aligned-elements .element .pull-right, .vertical-aligned-elements .element .pull-left {
-    float: none !important;
   }
 }
 /* 8. Animations */
