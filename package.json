@@ -1,0 +1,33 @@
+{
+  "name": "gs-plaza-business-center",
+  "version": "1.0.0",
+  "description": "GS-Plaza is a modern business center website showcasing real estate properties with a focus on luxury apartments and business facilities.",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "serve": "npx serve .",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "business-center",
+    "real-estate",
+    "property",
+    "website",
+    "html-template"
+  ],
+  "author": "ThemeStarz",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1",
+    "serve": "^14.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gs-plaza/business-center.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gs-plaza/business-center/issues"
+  },
+  "homepage": "https://github.com/gs-plaza/business-center#readme"
+}
