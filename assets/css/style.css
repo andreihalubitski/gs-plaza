@@ -178,6 +178,22 @@ Headers:		'Roboto', sans-serif;
 }
 
 /* 2. Hero Slider */
+  .hero-slider .carousel-hero-slider .owl-item .image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-slider .carousel-hero-slider .owl-item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-width: none !important;
+}
 .hero-slider {
   position: relative;
 }
@@ -2369,3 +2385,4 @@ body.loading-done .overlay {
     z-index: 2;
   }
 }
+
